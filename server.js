@@ -8,7 +8,12 @@ app.get("/", (req, res) => {
 
 let todos = [];
 let nextid = 1;
-
+// GET single todo by ID
+app.get('/todos/:id', (req, res) => {
+  const todo = todos.find(t => t.id == req.params.id)
+  if (!todo) return res.status(404).json({ error: 'Not found' })
+  res.json(todo)
+})
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
