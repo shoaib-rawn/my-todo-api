@@ -17,6 +17,16 @@ app.get('/todos/:id', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ status: 'OK!' })
 })
+
+// Add to server.js
+app.post('/login', (req, res) => {
+  res.json({ message: 'Login endpoint' })
+})
+// Add to server.js
+app.post('/register', (req, res) => {
+  res.json({ message: 'Register endpoint' })
+})
+
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
