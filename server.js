@@ -17,6 +17,10 @@ app.get('/todos/:id', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ status: 'OK!' })
 })
+// Add to server.js (before app.listen)
+app.get('/revert-test', (req, res) => {
+  res.json({ message: 'This is good code' })
+})
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
