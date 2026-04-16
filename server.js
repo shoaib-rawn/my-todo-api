@@ -17,6 +17,10 @@ app.get('/todos/:id', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ status: 'OK' })
 })
+app.get("/users",(req,res)=>{
+    const users=[];
+    console.log("still working ");
+})
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
