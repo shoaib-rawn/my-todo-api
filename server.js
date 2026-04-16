@@ -15,7 +15,7 @@ app.get('/todos/:id', (req, res) => {
   res.json(todo)
 })
 app.get('/health', (req, res) => {
-  res.json({ status: 'OK' })
+  res.json({ status: 'OK!' })
 })
 // GET all todos
 app.get('/todos', (req, res) => {
