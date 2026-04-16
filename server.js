@@ -14,6 +14,10 @@ app.get('/todos/:id', (req, res) => {
   if (!todo) return res.status(404).json({ error: 'Not found' })
   res.json(todo)
 })
+// Practice reset - First change
+app.get('/reset-test', (req, res) => {
+  res.json({ message: 'Testing reset' })
+})
 app.get('/health', (req, res) => {
   res.json({ status: 'OK!' })
 })
