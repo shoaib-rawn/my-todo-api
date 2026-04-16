@@ -21,6 +21,11 @@ app.get('/health', (req, res) => {
 app.get('/revert-test', (req, res) => {
   res.json({ message: 'This is good code' })
 })
+// Add this BROKEN code to server.js
+app.get('/broken', (req, res) => {
+  // This has a syntax error - missing closing parenthesis!
+  res.json({ message: 'Broken endpoint' }
+})
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
