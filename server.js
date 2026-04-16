@@ -14,6 +14,9 @@ app.get('/todos/:id', (req, res) => {
   if (!todo) return res.status(404).json({ error: 'Not found' })
   res.json(todo)
 })
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK' })
+})
 // GET all todos
 app.get('/todos', (req, res) => {
     res.json(todos);
